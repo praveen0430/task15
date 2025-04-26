@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Arrays</title>
+  <style>
+    body {
+      background-color: #ccff99;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #2c6b00;
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .output {
+      margin-top: 25px;
+      background-color: #f3ffe3;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 1.1em;
+    }
+
+    .output p {
+      margin: 10px 0;
+      color: #444;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #2c6b00;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 30px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>JavaScript: Arrays</h2>
+    <h3>
+      1. Write a program to sort a JavaScript Array. <br>
+      2. Write a program to concatenate two array elements and store them in a new array. <br>
+      3. Write a program to remove the first element from a JavaScript Array.
+    </h3>
+
+    <hr />
+
+    <div class="output" id="outputArea"></div>
+  </div>
+
+  <script>
+    const output = document.getElementById("outputArea");
+
+    // Question 1
+    let numbers = [4, 3, 5, 1, 2, 6];
+    numbers.sort((a, b) => a - b);
+    output.innerHTML += `<p><span class="label">1.)</span> Sorted array: [${numbers.join(", ")}]</p>`;
+
+    // Question 2
+    let array1 = [1, 2, 3];
+    let array2 = [4, 5, 6];
+    let newArray = array1.concat(array2);
+    output.innerHTML += `<p><span class="label">2.)</span> Combined array: [${newArray.join(", ")}]</p>`;
+
+    // Question 3
+    let fruits = ["apple", "banana", "cherry", "date"];
+    let removedElement = fruits.shift();
+    output.innerHTML += `<p><span class="label">3.)</span> Array after removing first element: [${fruits.join(", ")}]</p>`;
+    output.innerHTML += `<p><span class="label">3.)</span> Removed element: ${removedElement}</p>`;
+  </script>
+</body>
+</html>
